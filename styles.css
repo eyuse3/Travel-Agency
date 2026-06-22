@@ -7,22 +7,20 @@
   --light: #f5f6f8;
   --white: #ffffff;
   --text: #1d1f23;
-  --muted: #6b7280;
+  --grey: #6b7280;
   --border: #e5e7eb;
   --radius: 14px;
   --radius-pill: 999px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Helvetica, Arial, sans-serif;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --font:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -76,7 +74,7 @@ button {
 
 .section-sub {
   text-align: center;
-  color: var(--muted);
+  color: var(--grey);
   margin-bottom: 36px;
 }
 
@@ -97,7 +95,10 @@ button {
   padding: 12px 26px;
   font-size: 0.95rem;
   font-weight: 600;
-  transition: background 0.2s, color 0.2s, transform 0.15s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.15s;
 }
 
 .btn:hover {
@@ -115,7 +116,7 @@ button {
 
 .btn-outline {
   background: transparent;
-  color: var(--muted);
+  color: var(--grey);
 }
 
 .btn-outline:hover {
@@ -143,7 +144,10 @@ button {
   border-radius: var(--radius-pill);
   padding: 7px 16px;
   font-size: 0.85rem;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
 }
 
 .pill:hover {
@@ -180,7 +184,7 @@ button {
   color: var(--red);
 }
 
-/* Horizontal scroll-snap carousel (no JS needed) */
+/* Horizontal scroll*/
 
 .carousel {
   display: flex;
@@ -213,20 +217,18 @@ button {
   margin-bottom: 36px;
 }
 
-
 .icon {
   font-size: 18px;
   line-height: 1;
   flex-shrink: 0;
-  vertical-align: -2px;
 }
 
 .icon-sm {
   font-size: 15px;
 }
 
-.icon-muted {
-  color: var(--muted);
+.icon-grey {
+  color: var(--grey);
 }
 
 .search-tabs .tab {
@@ -240,7 +242,7 @@ button {
 }
 
 .pax-select .icon {
-  color: var(--muted);
+  color: var(--grey);
 }
 
 .input-wrap {
@@ -252,9 +254,9 @@ button {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--muted);
+  color: var(--grey);
   font-size: 18px;
-  pointer-events: none;          
+  pointer-events: none;
 }
 
 .field .input-wrap input {
@@ -291,74 +293,75 @@ button {
 }
 
 /* Icons used elsewhere on the page (sized/coloured per section) */
-.logo-mark .icon { 
+.logo-mark .icon {
   font-size: 18px;
 }
 
-.icon-caret { 
-  font-size: 13px; color: var(--muted); 
+.icon-caret {
+  font-size: 13px;
+  color: var(--grey);
 }
 
-.strip-inner span { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 6px; 
+.strip-inner span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.trust-icon { 
-  color: var(--red); 
+.trust-icon {
+  color: var(--red);
 }
-.trust-icon .icon { 
-  font-size: 22px; 
-}
-
-.popular-searches .pill { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 6px; 
-}
-.popular-searches .icon { 
-  color: var(--red); 
+.trust-icon .icon {
+  font-size: 22px;
 }
 
-.step-icon { 
-  color: var(--red); 
+.popular-searches .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.step-icon .icon { 
-  font-size: 26px; 
-}
-
-.tool-icon .icon { 
-  font-size: 24px; 
+.popular-searches .icon {
+  color: var(--red);
 }
 
-.play-btn .icon { 
-  font-size: 18px; 
-  margin-left: 2px; 
-}  /* optical centre */
-
-.verified { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 5px; 
+.step-icon {
+  color: var(--red);
+}
+.step-icon .icon {
+  font-size: 26px;
 }
 
-.help-buttons .btn { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 8px; 
+.tool-icon .icon {
+  font-size: 24px;
 }
 
-.payments-label { 
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center; 
-  gap: 8px; 
+.play-btn .icon {
+  font-size: 18px;
+  margin-left: 2px;
+} /* optical centre */
+
+.verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.help-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payments-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 /* 3. HEADER / STICKY NAV */
 .site-header {
-  position: sticky;          /* sticks after you scroll past it */
+  position: sticky; /* sticks after you scroll past it */
   top: 0;
   z-index: 100;
   background: var(--white);
@@ -398,34 +401,34 @@ button {
 .main-nav {
   display: flex;
   gap: 26px;
-  margin-left: auto;          
+  margin-left: auto;
   font-size: 0.95rem;
   font-weight: 500;
 }
 
-.main-nav a{
-  color: var(--muted);
+.main-nav a {
+  color: var(--grey);
 }
 
 .main-nav a:hover {
   color: var(--text);
 }
 
-.logo-img { 
-  height: 65px; 
-  width: auto; 
-  display: block; 
+.logo-img {
+  height: 65px;
+  width: auto;
+  display: block;
 }
 
 .caret {
   font-size: 0.7rem;
-  color: var(--muted);
+  color: var(--grey);
 }
 
-.pill-ghost { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 6px; 
+.pill-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .header-actions {
@@ -441,7 +444,7 @@ button {
   background:
     linear-gradient(rgba(8, 9, 12, 0.65), rgba(8, 9, 12, 0.78)),
     url("icons/AddisBG.webp") center/cover no-repeat;
-  padding: 72px 0 120px;    
+  padding: 72px 0 120px;
 }
 
 .hero-inner {
@@ -503,7 +506,7 @@ button {
   color: var(--white);
   font-weight: 600;
   font-size: 20px;
-  border-radius: 10px;  
+  border-radius: 10px;
   height: 50px;
 }
 
@@ -537,14 +540,14 @@ button {
   padding: 0 0 12px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--muted);                 
+  color: var(--grey);
   border-bottom: 2px solid transparent;
-  margin-bottom: -1px;                 
+  margin-bottom: -1px;
 }
 
 .tab.active {
-  color: var(--red);                  
-  border-bottom-color: var(--red);     
+  color: var(--red);
+  border-bottom-color: var(--red);
 }
 .trip-options {
   display: flex;
@@ -554,7 +557,6 @@ button {
   margin-bottom: 18px;
   font-size: 0.85rem;
 }
-
 
 .trip-toggle {
   display: inline-flex;
@@ -573,9 +575,11 @@ button {
   padding: 7px 18px;
   border-radius: var(--radius-pill);
   font-weight: 600;
-  color: var(--muted);
+  color: var(--grey);
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 
 .trip-toggle input:checked + label {
@@ -588,7 +592,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--muted);
+  color: var(--grey);
 }
 
 .pax-select {
@@ -621,7 +625,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--muted);
+  color: var(--grey);
   margin-bottom: 4px;
 }
 
@@ -672,8 +676,12 @@ button {
   font-size: 0.82rem;
 }
 
-.search-footer .free-note { justify-self: start; }
-.search-footer .search-links { justify-self: end; }
+.search-footer .free-note {
+  justify-self: start;
+}
+.search-footer .search-links {
+  justify-self: end;
+}
 
 .search-links {
   display: flex;
@@ -685,14 +693,13 @@ button {
   font-weight: 600;
 }
 
-
 .hero-strip {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   display: flex;
-  justify-content: center;        
+  justify-content: center;
   padding: 0 16px;
   padding-bottom: 20px;
 }
@@ -703,15 +710,19 @@ button {
   align-items: center;
   gap: 16px;
   padding: 12px 26px;
-  background: rgba(12, 13, 16, 0.88);           
+  background: rgba(12, 13, 16, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;            
+  border-radius: 8px;
   font-size: 0.82rem;
   color: #d1d5db;
 }
 
-.strip-inner .icon { color: #22c55e; }          
-.strip-sep { color: rgba(255, 255, 255, 0.3); } 
+.strip-inner .icon {
+  color: #22c55e;
+}
+.strip-sep {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 /* 5. TRUST BAR */
 .trust {
@@ -754,7 +765,7 @@ button {
 
 .trust-item p {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--grey);
 }
 
 .popular-searches {
@@ -766,7 +777,7 @@ button {
 
 .searches-label {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--grey);
 }
 
 /* 6. POPULAR FLIGHTS */
@@ -777,7 +788,9 @@ button {
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--white);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .flight-card:hover {
@@ -801,20 +814,19 @@ button {
 
 .route {
   font-size: 0.82rem;
-  color: var(--muted);
+  color: var(--grey);
   margin-bottom: 12px;
 }
 
 /* 7. WORLD MAP (DARK) */
 .world-map {
-  position: relative;            
+  position: relative;
   border-radius: var(--radius);
   border: 1px solid #24262d;
   margin-bottom: 22px;
   overflow: hidden;
-  line-height: 0;                
+  line-height: 0;
 }
-
 
 .map-svg {
   display: block;
@@ -826,7 +838,7 @@ button {
 .map-label {
   fill: #cfd2d8;
   font-family: var(--font);
-  font-size: 8px;                
+  font-size: 8px;
   font-weight: 500;
   pointer-events: none;
 }
@@ -838,15 +850,24 @@ button {
 }
 
 .hub-pulse {
-  transform-box: fill-box;       
+  transform-box: fill-box;
   transform-origin: center;
   animation: hub-pulse 2.4s ease-out infinite;
 }
 
 @keyframes hub-pulse {
-  0%   { transform: scale(0.7); opacity: 0.7; }
-  70%  { transform: scale(1.8); opacity: 0; }
-  100% { transform: scale(1.8); opacity: 0; }
+  0% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
 /* Decorative +/- zoom buttons, bottom-right (real zoom would need JS). */
@@ -879,11 +900,6 @@ button {
   background: var(--red);
 }
 
-/* Respect users who prefer no motion. */
-@media (prefers-reduced-motion: reduce) {
-  .hub-pulse { animation: none; }
-}
-
 .map-legend {
   display: flex;
   flex-wrap: wrap;
@@ -902,9 +918,15 @@ button {
   margin-right: 6px;
 }
 
-.dot-red { background: var(--red); }
-.dot-white { background: var(--white); }
-.dot-grey { background: #4b5563; }
+.dot-red {
+  background: var(--red);
+}
+.dot-white {
+  background: var(--white);
+}
+.dot-grey {
+  background: #4b5563;
+}
 
 .map-stats {
   display: flex;
@@ -942,7 +964,9 @@ button {
   overflow: hidden;
   background: var(--white);
   border: 1px solid var(--border);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .explore-card:hover {
@@ -966,10 +990,10 @@ button {
 
 .explore-card-body p {
   font-size: 0.82rem;
-  color: var(--muted);
+  color: var(--grey);
 }
 
-.btn-other{
+.btn-other {
   background: var(--white);
   color: var(--red);
   border-radius: 8px;
@@ -983,9 +1007,9 @@ button {
   border-color: var(--red);
   cursor: pointer;
   transition: 0.3s;
-} 
+}
 
-.btn-other:hover{
+.btn-other:hover {
   background: var(--red);
   color: var(--white);
   text-decoration: underline;
@@ -1040,7 +1064,7 @@ button {
 
 .step-card p {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--grey);
 }
 
 /* 10. SMART TOOLS (RED BAND) */
@@ -1051,16 +1075,7 @@ button {
   text-align: center;
 }
 
-.band-eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  opacity: 0.85;
-  margin-bottom: 6px;
-}
-
 .tools-band h2 {
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   margin-bottom: 28px;
 }
 
@@ -1097,19 +1112,19 @@ button {
   padding: 48px 0;
   background: var(--light);
 }
-.airlines-row1 { 
-    display: flex; 
-    gap: 32px; 
-    align-items: center; 
-    justify-content: center;
-    width: 100%; 
+.airlines-row {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .partners-label {
   text-align: center;
   font-size: 0.78rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--grey);
   margin-bottom: 24px;
 }
 
@@ -1118,16 +1133,6 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   gap: 14px;
-}
-
-.partner-logo {
-  border: 1px solid var(--border);
-  background: var(--white);
-  border-radius: 10px;
-  padding: 12px 22px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #4b5563;
 }
 
 /* 12. TESTIMONIALS */
@@ -1187,7 +1192,10 @@ button {
   color: #374151;
 }
 
-/* 13. VIDEOS (DARK) */
+/* 13. VIDEOS */
+.videos {
+  background-color: var(--light);
+}
 .video-card {
   position: relative;
   width: 220px;
@@ -1218,7 +1226,7 @@ button {
 .video-card p {
   margin-top: 10px;
   font-size: 0.82rem;
-  color: #d1d5db;
+  color: var(--text);
 }
 
 /* 14. STATS BAND (DARK) */
@@ -1302,7 +1310,7 @@ button {
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  list-style: none;            /* hide the default triangle... */
+  list-style: none;
   position: relative;
   padding-right: 26px;
 }
@@ -1311,7 +1319,7 @@ button {
   display: none;
 }
 
-.faq-item summary::after {     /* ...and draw our own + sign */
+.faq-item summary::after {
   content: "+";
   position: absolute;
   right: 0;
@@ -1321,13 +1329,13 @@ button {
 }
 
 .faq-item[open] summary::after {
-  content: "\2212";             /* minus sign when open */
+  content: "\2212";
 }
 
 .faq-item p {
   margin-top: 10px;
   font-size: 0.88rem;
-  color: var(--muted);
+  color: var(--grey);
 }
 
 /* 18. POPULAR ROUTES */
@@ -1351,7 +1359,7 @@ button {
 .routes-col a {
   display: block;
   font-size: 0.84rem;
-  color: var(--muted);
+  color: var(--grey);
   padding: 4px 0;
 }
 
@@ -1370,7 +1378,9 @@ button {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 22px;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .link-card:hover {
@@ -1386,7 +1396,7 @@ button {
 
 .link-card p {
   font-size: 0.84rem;
-  color: var(--muted);
+  color: var(--grey);
 }
 
 /* 20. NEED HELP */
@@ -1429,7 +1439,7 @@ button {
 
 .payments-note {
   font-size: 0.76rem;
-  color: var(--muted);
+  color: var(--grey);
 }
 
 /* 22. FOOTER */
@@ -1520,11 +1530,11 @@ button {
    Pattern: collapse multi-column grids first, then stack rows. */
 @media (max-width: 900px) {
   .main-nav {
-    display: none;             /* a hamburger needs JS; hide for now */
+    display: none; /* a hamburger needs JS; hide for now */
   }
 
   .search-fields {
-    grid-template-columns: 1fr 1fr;   /* 2-column form */
+    grid-template-columns: 1fr 1fr; /* 2-column form */
   }
 
   .swap-btn {
